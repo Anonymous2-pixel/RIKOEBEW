@@ -1,28 +1,34 @@
-// --- BAGIAN 1: KODE LAMA ANDA UNTUK TOMBOL "SAPA" ---
-// (Ini sudah diperbaiki syntax error-nya)
+/* --- Fitur 1: Tombol "Sapa" (Alert) --- */
 
+// Ambil elemen tombol sapa
 const Kliksaja = document.getElementById('sapaButton');
 
+// Ambil elemen pemutar musik (untuk di-pause)
+const pemutarMusik = document.getElementById('player-musik');
+
+// Saat tombol "sapa" diklik...
 Kliksaja.addEventListener('click', function() {
+    
+    // Jeda musiknya dulu (biar alert kedengaran)
+    pemutarMusik.pause(); 
+    
+    // Tampilkan alert (ini sudah diperbaiki)
     alert('Maaf! Kita hanya bisa temenan aja ya sory!');
 });
 
 
-// --- BAGIAN 2: KODE BARU UNTUK GANTI WARNA ---
+/* --- Fitur 2: Tombol "Ganti Mode" (Dark Mode) --- */
 
-// 1. Cari tombol "toggleWarna" yang kita buat di HTML
+// Ambil elemen tombol warna
 const tombolWarna = document.getElementById('toggleWarna');
 
-// 2. Cari elemen <body>, karena kita mau ganti warna seluruh body
+// Ambil elemen <body>
 const bodyHalaman = document.body;
 
-// 3. Tambahkan pendengar 'klik' ke tombol warna
+// Saat tombol "warna" diklik...
 tombolWarna.addEventListener('click', function() {
     
-    // 4. Inilah intinya:
-    // "classList.toggle" artinya:
-    // - JIKA class 'dark-mode' TIDAK ADA, maka TAMBAHKAN.
-    // - JIKA class 'dark-mode' SUDAH ADA, maka HAPUS.
+    // Toggle (tambah/hapus) class 'dark-mode' di <body>
     bodyHalaman.classList.toggle('dark-mode');
     
 });
