@@ -1,23 +1,23 @@
-/* --- KODE LAMA ANDA (JANGAN DIHAPUS) --- */
+/* --- Bagian A: Kode Asli Kamu --- */
 body {
     background-color: #FFFFE0; /* Warna kuning cerah */
-    font-family: monospace, sans-serif; /* jenis huruf yang bersih dan mudah dibaca */
+    font-family: monospace, sans-serif; 
     color: #191970; /* warna teks utama (Biru Gelap) */
     
-    /* Transisi agar pergantian warna lebih mulus */
+    /* Transisi agar ganti warna mulus */
     transition: background-color 0.3s, color 0.3s;
 }
 
 .kartu-profil {
     width: 300px;
-    margin: 50px auto; /* 50px jarak atas bawah, auto menengah kiri/kanan */
+    margin: 50px auto; 
     padding: 20px;
     background-color: white;
     border-radius: 15px; /* membuat sudut menjadi melengkung */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* efek bayangan */
     text-align: center;
-    
-    /* Transisi agar pergantian warna lebih mulus */
+
+    /* Transisi agar ganti warna mulus */
     transition: background-color 0.3s;
 }
 
@@ -26,19 +26,29 @@ body {
     border-radius: 50%; /* Membuat gambar menjadi lingkaran */
 }
 
-/* Style untuk tombol baru (Opsional, biar keren) */
+/* --- Bagian B: Style Tombol (Biar rapi) --- */
+button {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
 #toggleWarna {
     background-color: #333;
     color: white;
-    margin-left: 5px;
 }
 
-/* ===============================================
---- KODE BARU UNTUK MODE GELAP (DARK MODE) --- 
-===============================================
-*/
+/* --- Bagian C: Style Pemutar Musik --- */
+#player-musik {
+    width: 100%; /* Lebar player pas 100% di dalam kartu */
+    margin-top: 20px; /* Jarak dari tombol di atasnya */
+}
 
-/* Ini akan aktif JIKA <body> punya class "dark-mode" */
+/* --- Bagian D: Style untuk DARK MODE --- */
+
+/* Ini aktif JIKA <body> punya class "dark-mode" */
 body.dark-mode {
     background-color: #121212; /* Latar belakang jadi HITAM */
     color: #e0e0e0; /* Teks utama jadi putih pudar */
@@ -48,7 +58,7 @@ body.dark-mode {
 body.dark-mode .kartu-profil {
     background-color: #1E1E1E; /* Latar kartu jadi abu-abu gelap */
     color: #e0e0e0; /* Teks di dalam kartu jadi putih */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Bayangan disesuaikan */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
 }
 
 /* Judul (H1) saat dark mode */
@@ -56,14 +66,14 @@ body.dark-mode .kartu-profil h1 {
     color: #FFFFFF; /* Judul jadi putih terang */
 }
 
-/* Tombol "Klik Saja" saat dark mode */
-body.dark-mode #sapaButton {
+/* Tombol-tombol saat dark mode */
+body.dark-mode #sapaButton,
+body.dark-mode #toggleWarna {
     background-color: #f0f0f0;
     color: #333;
 }
 
-/* Tombol "Toggle" saat dark mode */
-body.dark-mode #toggleWarna {
-    background-color: #f0f0f0;
-    color: #333;
+/* Pemutar musik saat dark mode */
+body.dark-mode #player-musik {
+    filter: invert(1); /* Trik CSS membalik warna player */
 }
