@@ -1,19 +1,69 @@
+/* --- KODE LAMA ANDA (JANGAN DIHAPUS) --- */
 body {
-  background-color: #FFFFE0; /* Warna kuning cerah */
-  font-family: monospace, sans-serif; /* jenis huruf yang bersih dan mudah dibaca */
-  color: #191970; /* warna teks utama (Biru Gelap) */
+    background-color: #FFFFE0; /* Warna kuning cerah */
+    font-family: monospace, sans-serif; /* jenis huruf yang bersih dan mudah dibaca */
+    color: #191970; /* warna teks utama (Biru Gelap) */
+    
+    /* Transisi agar pergantian warna lebih mulus */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .kartu-profil {
-    width: 300px
-    margin: 50px auto; /* 50px jarak atas bawah,auto menengah kiri/kanan */
-    padding: 20px
+    width: 300px;
+    margin: 50px auto; /* 50px jarak atas bawah, auto menengah kiri/kanan */
+    padding: 20px;
     background-color: white;
-    border-radius: 15px; /* membuat sudut menjadimelengkung */
+    border-radius: 15px; /* membuat sudut menjadi melengkung */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* efek bayangan */
     text-align: center;
+    
+    /* Transisi agar pergantian warna lebih mulus */
+    transition: background-color 0.3s;
 }
 
 .kartu-profil img {
-      width: 150px;
-      border-radius: 50%;
+    width: 150px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+}
+
+/* Style untuk tombol baru (Opsional, biar keren) */
+#toggleWarna {
+    background-color: #333;
+    color: white;
+    margin-left: 5px;
+}
+
+/* ===============================================
+--- KODE BARU UNTUK MODE GELAP (DARK MODE) --- 
+===============================================
+*/
+
+/* Ini akan aktif JIKA <body> punya class "dark-mode" */
+body.dark-mode {
+    background-color: #121212; /* Latar belakang jadi HITAM */
+    color: #e0e0e0; /* Teks utama jadi putih pudar */
+}
+
+/* Kartu profil saat dark mode */
+body.dark-mode .kartu-profil {
+    background-color: #1E1E1E; /* Latar kartu jadi abu-abu gelap */
+    color: #e0e0e0; /* Teks di dalam kartu jadi putih */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Bayangan disesuaikan */
+}
+
+/* Judul (H1) saat dark mode */
+body.dark-mode .kartu-profil h1 {
+    color: #FFFFFF; /* Judul jadi putih terang */
+}
+
+/* Tombol "Klik Saja" saat dark mode */
+body.dark-mode #sapaButton {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Tombol "Toggle" saat dark mode */
+body.dark-mode #toggleWarna {
+    background-color: #f0f0f0;
+    color: #333;
+}
